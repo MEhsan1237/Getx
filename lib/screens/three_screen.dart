@@ -1,37 +1,39 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-class TwoScreen extends StatefulWidget {
-  const TwoScreen({super.key});
+class ThreeScreen extends StatefulWidget {
+  const ThreeScreen({super.key});
 
   @override
-  State<TwoScreen> createState() => _TwoScreenState();
+  State<ThreeScreen> createState() => _ThreeScreenState();
 }
 
-class _TwoScreenState extends State<TwoScreen> {
+class _ThreeScreenState extends State<ThreeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Two Screen"),backgroundColor: Colors.green,centerTitle: true,
+        title: Text("three Screen"),
+        backgroundColor: Colors.deepOrange,centerTitle: true,
+
       ),
       body: Center(child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Two Screen",style: TextStyle(color: Colors.red),),
+          Text("Three Screen",style: TextStyle(color: Colors.red),),
           SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 90.0),
             child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.deepOrange,
                   foregroundColor: Colors.black,
                 ),
                 onPressed: (){
-              Get.toNamed("/threeScreen");
-            }, child: Center(child: Text("click also here"))),
+                  Get.back();
+                  Get.back();
+                }, child: Center(child: Text("click also here"))),
           )
         ],
       ),),
