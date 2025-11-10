@@ -33,7 +33,7 @@ class _OneScreenState extends State<OneScreen> {
 
                 ),
                 onPressed: (){
-              Get.toNamed("/twoScreen");
+              Get.toNamed("/twoScreen" );
             }, child: Center(child: Text("click here"))),
           )
         ],

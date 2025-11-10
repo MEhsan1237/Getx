@@ -12,6 +12,7 @@ class _ThreeScreenState extends State<ThreeScreen> {
   final textController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final args = Get.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text("three Screen"),
@@ -23,6 +24,7 @@ class _ThreeScreenState extends State<ThreeScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text("Three Screen",style: TextStyle(color: Colors.red),),
+          Text(" Name : ${args['name']}"),
           SizedBox(height: 20,),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 90.0),
@@ -31,45 +33,45 @@ class _ThreeScreenState extends State<ThreeScreen> {
                   backgroundColor: Colors.deepOrange,
                   foregroundColor: Colors.black,
                 ),
-              onPressed: (){
-                  Get.bottomSheet(
-                    backgroundColor: Colors.white,
-                      Container(
-                    child:ListView.builder(
-                      itemCount: 30,
-                      itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text("hi $index"),
-                          subtitle: Text("hey"),
-                        );
-                      },),
-
-                  ));
-              },
-              child: Text("click here"),
               // onPressed: (){
-              //     Get.defaultDialog(
-              //       title: "Edit The Text",
-              //         content: TextFormField(
-              //           controller: textController,
-              //           decoration: InputDecoration(
-              //             border: OutlineInputBorder(
-              //               borderRadius: BorderRadius.circular(20)
-              //             ),
-              //
-              //           ),
-              //         ),
-              //       confirm: Row(
-              //         crossAxisAlignment: CrossAxisAlignment.center,
-              //         mainAxisAlignment: MainAxisAlignment.center,
-              //         children: [
-              //           OutlinedButton(onPressed: (){}, child: Text("yes bro")),
-              //           SizedBox(width: 4,),
-              //           OutlinedButton(onPressed: (){}, child: Text("no bro")),
-              //         ],
-              //       )
-              //     );
-              // }, child: Text("Click"),
+              //     // Get.bottomSheet(
+              //     //   backgroundColor: Colors.white,
+              //     //     Container(
+              //     //       child:ListView.builder(
+              //     //         itemCount: 30,
+              //     //         itemBuilder: (context, index) {
+              //     //           return ListTile(
+              //     //             title: Text("hi $index"),
+              //     //             subtitle: Text("hey"),
+              //     //           );
+              //     //         },),
+              //     //
+              //     //     ));
+              // },
+
+              onPressed: (){
+                  Get.defaultDialog(
+                    title: "Edit The Text",
+                      content: TextFormField(
+                        controller: textController,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20)
+                          ),
+
+                        ),
+                      ),
+                    confirm: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        OutlinedButton(onPressed: (){}, child: Text("yes bro")),
+                        SizedBox(width: 4,),
+                        OutlinedButton(onPressed: (){}, child: Text("no bro")),
+                      ],
+                    )
+                  );
+              }, child: Text("Click"),
               // onPressed: () {
               //   String username = "Ehsan";
               //

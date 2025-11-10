@@ -30,7 +30,11 @@ class _TwoScreenState extends State<TwoScreen> {
                   foregroundColor: Colors.black,
                 ),
                 onPressed: (){
-              Get.toNamed("/threeScreen");
+              Get.toNamed("/threeScreen"
+                  ,arguments: {
+                    "name":"ehsan",
+                    "age" : "19"
+                  });
             }, child: Center(child: Text("click also here"))),
           )
         ],
