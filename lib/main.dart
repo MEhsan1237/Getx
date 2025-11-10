@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/screens/height_screen.dart';
 import 'package:getx/screens/one_screen.dart';
 import 'package:getx/screens/three_screen.dart';
 import 'package:getx/screens/two_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const OneScreen(),
+      home: const HeightScreen(),
       getPages: [
         GetPage(name: "/", page:()=> OneScreen()),
         GetPage(name: "/twoScreen", page:()=> TwoScreen()),
