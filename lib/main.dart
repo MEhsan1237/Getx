@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/screens/height_screen.dart';
+import 'package:getx/screens/local_screen.dart';
 import 'package:getx/screens/one_screen.dart';
 import 'package:getx/screens/three_screen.dart';
+import 'package:getx/screens/translation/languages_class.dart';
 import 'package:getx/screens/two_screen.dart';
 
 void main() {
@@ -16,13 +18,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      locale: Locale('en','US'),
+      fallbackLocale: Locale('en','US'),
+      translations: Languages(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HeightScreen(),
+      home: const LocalScreen(),
       getPages: [
         GetPage(name: "/", page:()=> OneScreen()),
         GetPage(name: "/twoScreen", page:()=> TwoScreen()),
