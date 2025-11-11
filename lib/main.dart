@@ -7,6 +7,7 @@ import 'package:getx/screens/three_screen.dart';
 import 'package:getx/screens/translation/languages_class.dart';
 import 'package:getx/screens/two_screen.dart';
 import 'package:getx/state_management/counter_screen.dart';
+import 'package:getx/state_management/opacity_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const CounterScreen(),
+      home: const OpacityScreen(),
       getPages: [
         GetPage(name: "/", page:()=> OneScreen()),
         GetPage(name: "/twoScreen", page:()=> TwoScreen()),
