@@ -7,6 +7,7 @@ import 'package:getx/screens/three_screen.dart';
 import 'package:getx/screens/translation/languages_class.dart';
 import 'package:getx/screens/two_screen.dart';
 import 'package:getx/state_management/counter_screen.dart';
+import 'package:getx/state_management/image_screen.dart';
 import 'package:getx/state_management/notification_screen.dart';
 import 'package:getx/state_management/opacity_screen.dart';
 
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const NotificationScreen(),
+      home: const ImageScreen(),
       getPages: [
         GetPage(name: "/", page:()=> OneScreen()),
         GetPage(name: "/twoScreen", page:()=> TwoScreen()),
