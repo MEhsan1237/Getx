@@ -10,6 +10,7 @@ import 'package:getx/state_management/counter_screen.dart';
 import 'package:getx/state_management/image_screen.dart';
 import 'package:getx/state_management/notification_screen.dart';
 import 'package:getx/state_management/opacity_screen.dart';
+import 'package:getx/state_management/password_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
 
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ImageScreen(),
+      home: const PasswordScreen(),
       getPages: [
         GetPage(name: "/", page:()=> OneScreen()),
         GetPage(name: "/twoScreen", page:()=> TwoScreen()),
